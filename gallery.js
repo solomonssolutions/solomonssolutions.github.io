@@ -61,7 +61,7 @@ var PROJECTS=[
     P2("nat-5","during","Passage ceiling with downlights"),
     P2("nat-6","after","Finished ceiling with recessed downlights")
    ]},
-  {name:"Oxford staircases", area:"",
+  {name:"Oxford staircases", area:"Rosebank",
    blurb:"Exterior staircase retiling with dark slate-look tiles and aluminium nosings.",
    cover:P2("ox-5","after","Finished tiled staircase"),
    story:{
