@@ -1,6 +1,9 @@
 // Add a project: copy an object in PROJECTS. Photos go in photos/ (about 1600px on the long side).
 // stage: before | during | after. story: short text for each stage.
 var FN={"lenasia-before-1": "1-lenasia-before-1", "lenasia-during-1": "2-lenasia-during-1", "kk-after-1": "3-kk-after-1", "kk-after-2": "4-kk-after-2", "kk-after-3": "5-kk-after-3", "kk-after-4": "6-kk-after-4", "kk-before-1": "7-kk-before-1", "kk-before-2": "8-kk-before-2", "kk-during-1": "9-kk-during-1", "kk-during-2": "10-kk-during-2", "kk-during-3": "11-kk-during-3", "kk-during-4": "12-kk-during-4", "kk-during-5": "13-kk-during-5", "kk-during-6": "14-kk-during-6", "lenasia-after-1": "15-lenasia-after-1", "lenasia-after-2": "16-lenasia-after-2", "lenasia-after-3": "17-lenasia-after-3", "lenasia-after-4": "18-lenasia-after-4", "lenasia-after-5": "19-lenasia-after-5", "lenasia-during-2": "20-lenasia-during-2", "lenasia-during-3": "21-lenasia-during-3"};
+var FN2={"alb-1":"1-alb-1","alb-2":"2-alb-2","alb-3":"3-alb-3","alb-4":"4-alb-4","alb-5":"5-alb-5","nat-1":"6-nat-1","nat-2":"7-nat-2","nat-3":"8-nat-3","nat-4":"9-nat-4","nat-5":"10-nat-5","nat-6":"11-nat-6","ox-1":"12-ox-1","ox-2":"13-ox-2","ox-3":"14-ox-3","ox-4":"15-ox-4","ox-5":"16-ox-5","ox-6":"17-ox-6"};var VF={"alb-v1":"19-alb-v1","alb-v1p":"18-alb-v1-poster","nat-v1":"21-nat-v1","nat-v1p":"20-nat-v1-poster","nat-v2":"23-nat-v2","nat-v2p":"22-nat-v2-poster"};
+function P2(n,s,a){return {stage:s,src:"photos2/"+FN2[n]+".jpg",alt:a}}
+function V(n,c){return {src:"videos/"+VF[n]+".mp4",poster:"videos/"+VF[n+"p"]+".jpg",caption:c}}
 function P(n,s,a){return {stage:s,src:"photos/"+FN[n]+".jpg",alt:a}}
 var PROJECTS=[
   {name:"Lenasia Residence", area:"Lenasia, Johannesburg",
@@ -42,6 +45,52 @@ var PROJECTS=[
     P("kk-after-3","after","Kota King from the square"),
     P("kk-after-4","after","Back-of-house kitchen")
    ]},
+  {name:"Naturena suspended ceiling", area:"Naturena",
+   blurb:"Suspended ceilings with stepped bulkheads and recessed downlights through the living areas and passage of a home.",
+   cover:P2("nat-6","after","Finished ceiling with recessed downlights"),
+   story:{
+    before:"",
+    during:"Ceiling boards and bulkheads were framed and fixed through the lounge, dining area and passage. The recessed downlights were fitted and the boards finished smooth, ready for paint.",
+    after:"The finished ceiling is painted white, with stepped bulkheads and recessed downlights over a bright, clean room."},
+   videos:[V("nat-v1","Naturena: ceilings and LED cove lighting, walkthrough 1"),V("nat-v2","Naturena: LED cove lighting in the evening")],
+   photos:[
+    P2("nat-1","during","Bulkhead framing going up"),
+    P2("nat-2","during","Ceiling boards and downlight"),
+    P2("nat-3","during","Bulkhead between the passage and kitchen"),
+    P2("nat-4","during","Ceiling and bulkhead in the lounge"),
+    P2("nat-5","during","Passage ceiling with downlights"),
+    P2("nat-6","after","Finished ceiling with recessed downlights")
+   ]},
+  {name:"Oxford staircases", area:"",
+   blurb:"Exterior staircase retiling with dark slate-look tiles and aluminium nosings.",
+   cover:P2("ox-5","after","Finished tiled staircase"),
+   story:{
+    before:"The existing staircase had tiles marked for repair.",
+    during:"The crew chipped out the marked tiles and laid new dark tiles step by step.",
+    after:"The finished staircase has dark slate-look tiles with an aluminium nosing on every step, neat edges against the stair walls and a white handrail."},
+   photos:[
+    P2("ox-4","before","Staircase with tiles marked for repair"),
+    P2("ox-1","during","Crew removing tiles"),
+    P2("ox-2","during","Crew at work on the steps"),
+    P2("ox-3","during","Crew working up the staircase"),
+    P2("ox-5","after","Finished staircase with aluminium nosings"),
+    P2("ox-6","after","Finished staircase from the bottom")
+   ]},
+  {name:"Alberton bathroom refurb", area:"Alberton",
+   blurb:"A full bathroom refurbishment: old tiles and fittings stripped out, then new wall and floor tiles and a new suite.",
+   cover:P2("alb-5","after","Finished bathroom"),
+   story:{
+    before:"The old bathroom had beige wall tiles, a tiled shower base and an old suite. The crew started by taking out the fittings.",
+    during:"The old fittings were removed and the walls stripped back to the bare surface, ready for new tiling.",
+    after:"The finished bathroom has new cream wall and floor tiles, a bath with brass-finish taps and a new toilet."},
+   videos:[V("alb-v1","Alberton bathroom walkthrough")],
+   photos:[
+    P2("alb-1","before","Removing the old toilet and cistern"),
+    P2("alb-2","before","Old bathroom during strip-out"),
+    P2("alb-3","during","Walls stripped back to the bare surface"),
+    P2("alb-4","during","Old fittings removed"),
+    P2("alb-5","after","Finished bathroom")
+   ]},
 ];
 var VIDEOS=[];
 var ALL=[];
@@ -61,6 +110,7 @@ PROJECTS.forEach(function(p){var s=document.createElement("article");s.className
   var d=document.createElement("div");d.className="stage";
   d.innerHTML='<h4><span>'+LAB[st]+'</span></h4><p>'+((p.story&&p.story[st])||"")+'</p><div class="gal"></div>';
   var g=d.querySelector(".gal");ph.forEach(function(x){g.appendChild(fig(x))});s.appendChild(d)});
+ if(p.videos&&p.videos.length){var vd=document.createElement("div");vd.className="stage";vd.innerHTML='<h4><span>Walkthrough</span></h4><div class="vids"></div>';var vg=vd.querySelector(".vids");p.videos.forEach(function(x){var f=document.createElement("figure");f.innerHTML='<video controls preload="none" playsinline poster="'+x.poster+'" src="'+x.src+'"></video><figcaption>'+x.caption+'</figcaption>';vg.appendChild(f)});s.appendChild(vd)}
  pr.appendChild(s)});
 var v=document.getElementById("vids");
 VIDEOS.forEach(function(x){var f=document.createElement("figure");f.innerHTML='<video controls preload="none" playsinline poster="'+(x.poster||"")+'" src="'+x.src+'"></video><figcaption>'+x.caption+'</figcaption>';v.appendChild(f)});
