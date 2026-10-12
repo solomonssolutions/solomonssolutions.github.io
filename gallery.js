@@ -1,6 +1,6 @@
 // Add a project: copy an object in PROJECTS. Photos go in photos/ (about 1600px on the long side).
 // stage: before | during | after. story: short text for each stage.
-var FN={"lenasia-before-1": "1-lenasia-before-1", "lenasia-during-1": "2-lenasia-during-1", "kk-after-1": "3-kk-after-1", "kk-after-2": "4-kk-after-2", "kk-after-3": "5-kk-after-3", "kk-after-4": "6-kk-after-4", "kk-before-1": "7-kk-before-1", "kk-before-2": "8-kk-before-2", "kk-during-1": "9-kk-during-1", "kk-during-2": "10-kk-during-2", "kk-during-3": "11-kk-during-3", "kk-during-4": "12-kk-during-4", "kk-during-5": "13-kk-during-5", "kk-during-6": "14-kk-during-6", "lenasia-after-1": "15-lenasia-after-1", "lenasia-after-2": "16-lenasia-after-2", "lenasia-after-3": "17-lenasia-after-3", "lenasia-after-4": "18-lenasia-after-4", "lenasia-after-5": "19-lenasia-after-5", "lenasia-during-2": "20-lenasia-during-2", "lenasia-during-3": "21-lenasia-during-3"};
+var FN={"kk-after-5":"1-kk-after-5","kk-after-6":"2-kk-after-6","kk-after-7":"3-kk-after-7","lenasia-before-1": "1-lenasia-before-1", "lenasia-during-1": "2-lenasia-during-1", "kk-after-1": "3-kk-after-1", "kk-after-2": "4-kk-after-2", "kk-after-3": "5-kk-after-3", "kk-after-4": "6-kk-after-4", "kk-before-1": "7-kk-before-1", "kk-before-2": "8-kk-before-2", "kk-during-1": "9-kk-during-1", "kk-during-2": "10-kk-during-2", "kk-during-3": "11-kk-during-3", "kk-during-4": "12-kk-during-4", "kk-during-5": "13-kk-during-5", "kk-during-6": "14-kk-during-6", "lenasia-after-1": "15-lenasia-after-1", "lenasia-after-2": "16-lenasia-after-2", "lenasia-after-3": "17-lenasia-after-3", "lenasia-after-4": "18-lenasia-after-4", "lenasia-after-5": "19-lenasia-after-5", "lenasia-during-2": "20-lenasia-during-2", "lenasia-during-3": "21-lenasia-during-3"};
 var FN2={"pro-1":"1-pro-1","pro-10":"2-pro-10","pro-2":"3-pro-2","pro-3":"4-pro-3","pro-4":"5-pro-4","pro-5":"6-pro-5","pro-6":"7-pro-6","pro-7":"8-pro-7","pro-8":"9-pro-8","pro-9":"10-pro-9","alb-1":"1-alb-1","alb-2":"2-alb-2","alb-3":"3-alb-3","alb-4":"4-alb-4","alb-5":"5-alb-5","nat-1":"6-nat-1","nat-2":"7-nat-2","nat-3":"8-nat-3","nat-4":"9-nat-4","nat-5":"10-nat-5","nat-6":"11-nat-6","ox-1":"12-ox-1","ox-2":"13-ox-2","ox-3":"14-ox-3","ox-4":"15-ox-4","ox-5":"16-ox-5","ox-6":"17-ox-6"};var VF={"alb-v2":"2-alb-v2","alb-v2p":"1-alb-v2-poster","alb-v3":"4-alb-v3","alb-v3p":"3-alb-v3-poster","alb-v4":"6-alb-v4","alb-v4p":"5-alb-v4-poster","alb-v5":"8-alb-v5","alb-v5p":"7-alb-v5-poster","pro-v1":"12-pro-v1","pro-v2":"2-pro-v2","pro-v2p":"1-pro-v2-poster","pro-v1p":"11-pro-v1-poster","alb-v1":"19-alb-v1","alb-v1p":"18-alb-v1-poster","nat-v1":"21-nat-v1","nat-v1p":"20-nat-v1-poster","nat-v2":"23-nat-v2","nat-v2p":"22-nat-v2-poster"};
 function P2(n,s,a){return {stage:s,src:"photos2/"+FN2[n]+".jpg",alt:a}}
 function V(n,c){return {src:"videos/"+VF[n]+".mp4",poster:"videos/"+VF[n+"p"]+".jpg",caption:c}}
@@ -26,11 +26,11 @@ var PROJECTS=[
    ]},
   {name:"Kota King, Doornfontein", area:"Johannesburg",
    blurb:"Full shop fit-out: brickwork, plastering, steel bulkhead, LED lighting, tiling and finishing, from an empty unit to a trading counter.",
-   cover:P("kk-after-2","after","Kota King shopfront at night"),
+   cover:P("kk-after-7","after","Finished counter with LED-lit bulkhead"),
    story:{
     before:"An empty shell of a unit: bare walls and floor, ready for a full fit-out.",
     during:"The counter brickwork went up first, then the steel bulkhead frame was fitted and plastered. LED lighting was installed and new floor tiles were laid.",
-    after:"A finished, branded takeaway: painted bulkhead, lit counter, tiled kitchen and a shopfront ready to trade."},
+    after:"A finished, branded takeaway: painted bulkhead with LED edging, a ribbed counter front with the Kota King logo, and a tiled kitchen behind."},
    photos:[
     P("kk-before-1","before","Empty unit before work"),
     P("kk-before-2","before","Inside the empty unit"),
@@ -40,9 +40,9 @@ var PROJECTS=[
     P("kk-during-4","during","Bulkhead plastered"),
     P("kk-during-5","during","Counter and LED lighting going in"),
     P("kk-during-6","during","New floor tiles laid"),
-    P("kk-after-1","after","Finished counter and painted bulkhead"),
-    P("kk-after-2","after","Kota King shopfront at night"),
-    P("kk-after-3","after","Kota King from the square"),
+    P("kk-after-7","after","Finished counter and LED-lit bulkhead"),
+    P("kk-after-6","after","Kota King counter with LED lighting"),
+    P("kk-after-5","after","Branded counter front and kitchen"),
     P("kk-after-4","after","Back-of-house kitchen")
    ]},
   {name:"Naturena suspended ceiling", area:"Naturena",
