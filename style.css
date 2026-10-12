@@ -40,3 +40,7 @@ article h3{margin:4px 0 6px;font-size:18px}article p{color:var(--mut);font-size:
 footer{text-align:center;padding:40px 20px 90px;color:var(--mut);font-size:13px;border-top:1px solid #222}
 .wa-float{position:fixed;right:14px;bottom:14px;background:var(--gold);color:#000;font-weight:700;padding:12px 18px;border-radius:99px;box-shadow:0 4px 18px #0008}
 @media(min-width:760px){.nav nav a:not(.pill){display:inline}.grid{grid-template-columns:repeat(3,1fr)}.contact{grid-template-columns:1fr 1fr}.gal{grid-template-columns:repeat(3,1fr)}.vids{grid-template-columns:repeat(3,1fr)}.cta{flex-direction:row;max-width:none;justify-content:center}.btn{min-width:200px}.hero{padding:80px 20px}}
+
+.proj{margin:36px auto 0}.proj h3{font-size:22px;margin:0 0 4px}.proj .meta{color:var(--gold);font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 10px}
+.gal figure{margin:0;position:relative}.gal figure img{display:block}
+.gal figcaption{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.7);color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:.1em;padding:3px 8px;border-radius:999px}
