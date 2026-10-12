@@ -1,7 +1,7 @@
 // Add a project: copy an object in PROJECTS. Photos go in photos/ (about 1600px on the long side).
 // stage: before | during | after. story: short text for each stage.
 var FN={"lenasia-before-1": "1-lenasia-before-1", "lenasia-during-1": "2-lenasia-during-1", "kk-after-1": "3-kk-after-1", "kk-after-2": "4-kk-after-2", "kk-after-3": "5-kk-after-3", "kk-after-4": "6-kk-after-4", "kk-before-1": "7-kk-before-1", "kk-before-2": "8-kk-before-2", "kk-during-1": "9-kk-during-1", "kk-during-2": "10-kk-during-2", "kk-during-3": "11-kk-during-3", "kk-during-4": "12-kk-during-4", "kk-during-5": "13-kk-during-5", "kk-during-6": "14-kk-during-6", "lenasia-after-1": "15-lenasia-after-1", "lenasia-after-2": "16-lenasia-after-2", "lenasia-after-3": "17-lenasia-after-3", "lenasia-after-4": "18-lenasia-after-4", "lenasia-after-5": "19-lenasia-after-5", "lenasia-during-2": "20-lenasia-during-2", "lenasia-during-3": "21-lenasia-during-3"};
-var FN2={"alb-1":"1-alb-1","alb-2":"2-alb-2","alb-3":"3-alb-3","alb-4":"4-alb-4","alb-5":"5-alb-5","nat-1":"6-nat-1","nat-2":"7-nat-2","nat-3":"8-nat-3","nat-4":"9-nat-4","nat-5":"10-nat-5","nat-6":"11-nat-6","ox-1":"12-ox-1","ox-2":"13-ox-2","ox-3":"14-ox-3","ox-4":"15-ox-4","ox-5":"16-ox-5","ox-6":"17-ox-6"};var VF={"alb-v1":"19-alb-v1","alb-v1p":"18-alb-v1-poster","nat-v1":"21-nat-v1","nat-v1p":"20-nat-v1-poster","nat-v2":"23-nat-v2","nat-v2p":"22-nat-v2-poster"};
+var FN2={"pro-1":"1-pro-1","pro-10":"2-pro-10","pro-2":"3-pro-2","pro-3":"4-pro-3","pro-4":"5-pro-4","pro-5":"6-pro-5","pro-6":"7-pro-6","pro-7":"8-pro-7","pro-8":"9-pro-8","pro-9":"10-pro-9","alb-1":"1-alb-1","alb-2":"2-alb-2","alb-3":"3-alb-3","alb-4":"4-alb-4","alb-5":"5-alb-5","nat-1":"6-nat-1","nat-2":"7-nat-2","nat-3":"8-nat-3","nat-4":"9-nat-4","nat-5":"10-nat-5","nat-6":"11-nat-6","ox-1":"12-ox-1","ox-2":"13-ox-2","ox-3":"14-ox-3","ox-4":"15-ox-4","ox-5":"16-ox-5","ox-6":"17-ox-6"};var VF={"pro-v1":"12-pro-v1","pro-v1p":"11-pro-v1-poster","alb-v1":"19-alb-v1","alb-v1p":"18-alb-v1-poster","nat-v1":"21-nat-v1","nat-v1p":"20-nat-v1-poster","nat-v2":"23-nat-v2","nat-v2p":"22-nat-v2-poster"};
 function P2(n,s,a){return {stage:s,src:"photos2/"+FN2[n]+".jpg",alt:a}}
 function V(n,c){return {src:"videos/"+VF[n]+".mp4",poster:"videos/"+VF[n+"p"]+".jpg",caption:c}}
 function P(n,s,a){return {stage:s,src:"photos/"+FN[n]+".jpg",alt:a}}
@@ -90,6 +90,26 @@ var PROJECTS=[
     P2("alb-3","during","Walls stripped back to the bare surface"),
     P2("alb-4","during","Old fittings removed"),
     P2("alb-5","after","Finished bathroom")
+   ]},
+  {name:"Protea gamazine", area:"",
+   blurb:"Textured gamazine wall coating applied by hand to the boundary and entrance walls of a home.",
+   cover:P2("pro-5","after","Finished textured frontage"),
+   story:{
+    before:"The boundary and entrance walls were rough grey plaster, with cracks and patched areas.",
+    during:"The crew applied the textured gamazine coat by hand, working across the walls and columns at the entrance.",
+    after:"The finished walls have a warm brown textured gamazine finish, even and clean around the entrance."},
+   videos:[V("pro-v1","Applying the gamazine texture")],
+   photos:[
+    P2("pro-1","before","Grey plastered wall and driveway"),
+    P2("pro-2","before","Curved garden wall before texturing"),
+    P2("pro-3","before","Entrance before texturing"),
+    P2("pro-6","before","Cracked wall corner"),
+    P2("pro-9","before","Street view before texturing"),
+    P2("pro-4","during","Crew applying the gamazine coat"),
+    P2("pro-7","during","Texturing the entrance wall"),
+    P2("pro-8","during","Working on the entrance column"),
+    P2("pro-5","after","Finished textured frontage"),
+    P2("pro-10","after","Finished textured corner")
    ]},
 ];
 var VIDEOS=[];
