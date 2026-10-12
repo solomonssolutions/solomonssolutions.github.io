@@ -15,7 +15,7 @@ var PROJECTS=[
     {stage:"during", src:"gallery/during-6.jpg", alt:"New floor tiles laid"},
     {stage:"after", src:"gallery/after-1.jpg", alt:"Finished counter and painted bulkhead"},
     {stage:"after", src:"gallery/after-2.jpg", alt:"Kota King shopfront at night"},
-    {stage:"after", src:"gallery/after-3.jpg", alt:"Kota King from the square"},
+    {stage:"after", src:"gallery/1-after-3.jpg", alt:"Kota King from the square"},
     {stage:"after", src:"gallery/after-4.jpg", alt:"Back-of-house kitchen"},
    ]},
 ];
