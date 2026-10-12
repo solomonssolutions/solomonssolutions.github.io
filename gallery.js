@@ -111,6 +111,10 @@ var PROJECTS=[
     P2("pro-5","after","Finished textured frontage"),
     P2("pro-10","after","Finished textured corner")
    ]},
+  {name:"Protea Glen Extension 11", area:"Protea Glen Extension 11",
+   blurb:"A completed home, shown in a full walkthrough: night exterior with an LED-lit courtyard and artificial grass, dining area, lounge, bathroom with a freestanding bath, bedroom with LED cove lighting and a shower.",
+   videos:[V("pro-v2","Protea Glen Extension 11: completed home walkthrough")],
+   photos:[]},
 ];
 var VIDEOS=[];
 var ALL=[];
