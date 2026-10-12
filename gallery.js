@@ -98,7 +98,7 @@ var PROJECTS=[
     before:"The boundary and entrance walls were rough grey plaster, with cracks and patched areas.",
     during:"The crew applied the textured gamazine coat by hand, working across the walls and columns at the entrance.",
     after:"The finished walls have a warm brown textured gamazine finish, even and clean around the entrance."},
-   videos:[V("pro-v1","Applying the gamazine texture"),V("pro-v2","Protea Glen completed project")],
+   videos:[V("pro-v1","Applying the gamazine texture")],
    photos:[
     P2("pro-1","before","Grey plastered wall and driveway"),
     P2("pro-2","before","Curved garden wall before texturing"),
