@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Company Profile | Solomons Solutions</title>
+<meta name="description" content="Solomons Solutions company profile: services, values and completed projects. Read online, download or print.">
+<link rel="icon" href="img/favicon.png">
+<style>
+:root{--g:#b8a05a;--g2:#d4bd78}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#0b0b0b;color:#eee;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+body{display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid #222;flex-wrap:wrap}
+header a.back{color:var(--g2);text-decoration:none;font-size:14px}
+header b{color:#fff;font-size:15px}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:var(--g);color:#000;font-weight:700;border:0;border-radius:9px;padding:9px 14px;font-size:14px;text-decoration:none;cursor:pointer}
+.btn.o{background:transparent;color:var(--g2);border:1px solid var(--g)}
+main{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:auto;padding:12px;min-height:0}
+#book{display:flex;gap:0;align-items:center;justify-content:center;max-height:100%;max-width:100%;touch-action:pan-y}
+#book img{display:block;height:calc(100vh - 150px);max-width:100%;width:auto;object-fit:contain;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.6);cursor:zoom-in}
+#book.two img{max-width:50%}
+#book.zoom{align-items:flex-start;justify-content:flex-start;max-height:none;max-width:none}
+#book.zoom img{height:auto;width:min(1400px,200vw);max-width:none;cursor:zoom-out}
+.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.65);color:var(--g2);border:1px solid var(--g);border-radius:999px;width:46px;height:46px;font-size:24px;cursor:pointer;z-index:2}
+#pv{left:10px}#nx{right:10px}
+footer{padding:10px;text-align:center;color:#aaa;font-size:13px;border-top:1px solid #222}
+@media print{body{background:#fff}header,footer,.nav{display:none}main{display:block;overflow:visible}#book{display:block}#book img{height:auto;width:100%;max-width:100%;box-shadow:none;page-break-after:always}}
+</style></head><body>
+<header><div><a class="back" href="./#portfolio">&larr; Back to site</a> &nbsp; <b>Solomons Solutions | Company Profile</b></div>
+<div class="acts"><a class="btn" id="dl" href="39-Solomons-Solutions-Company-Profile.pdf" download="Solomons-Solutions-Company-Profile.pdf">Download PDF</a><a class="btn o" id="pr" href="39-Solomons-Solutions-Company-Profile.pdf" target="_blank" rel="noopener">Open / print</a></div></header>
+<main><button class="nav" id="pv" aria-label="Previous page">&#8249;</button><div id="book"></div><button class="nav" id="nx" aria-label="Next page">&#8250;</button></main>
+<footer><span id="pn"></span> &nbsp;|&nbsp; Tap a page to zoom. Swipe or use the arrows to turn pages.</footer>
+<script>
+var PAGES=["profile/23-pg-01.jpg", "profile/24-pg-02.jpg", "profile/25-pg-03.jpg", "profile/26-pg-04.jpg", "profile/27-pg-05.jpg", "profile/28-pg-06.jpg", "profile/29-pg-07.jpg", "profile/30-pg-08.jpg", "profile/31-pg-09.jpg", "profile/32-pg-10.jpg", "profile/33-pg-11.jpg", "profile/34-pg-12.jpg", "profile/35-pg-13.jpg", "profile/36-pg-14.jpg", "profile/37-pg-15.jpg", "profile/38-pg-16.jpg"];
+var book=document.getElementById("book"),pn=document.getElementById("pn"),s=0,zoom=false;
+function two(){return window.innerWidth>=900}
+function spreads(){var o=[[0]];for(var i=1;i<PAGES.length;i+=2){o.push(i+1<PAGES.length?[i,i+1]:[i])}return o}
+function draw(){var sp=two()?spreads():PAGES.map(function(_,i){return [i]});if(s>=sp.length)s=sp.length-1;if(s<0)s=0;
+ book.innerHTML="";book.className=(two()&&sp[s].length==2?"two ":"")+(zoom?"zoom":"");
+ sp[s].forEach(function(i){var im=new Image();im.src=PAGES[i];im.alt="Page "+(i+1);im.onclick=function(){zoom=!zoom;draw()};book.appendChild(im)});
+ pn.textContent=(sp[s].length==2?"Pages "+(sp[s][0]+1)+"-"+(sp[s][1]+1):"Page "+(sp[s][0]+1))+" of "+PAGES.length;
+ [s+1,s+2].forEach(function(k){if(sp[k])sp[k].forEach(function(i){(new Image()).src=PAGES[i]})})}
+function go(d){zoom=false;s+=d;draw()}
+document.getElementById("pv").onclick=function(){go(-1)};document.getElementById("nx").onclick=function(){go(1)};
+document.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")go(-1);if(e.key==="ArrowRight")go(1)});
+var x0=null;book.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});
+book.addEventListener("touchend",function(e){if(x0===null||zoom)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(d<0?1:-1);x0=null});
+window.addEventListener("resize",draw);draw();
+</script></body></html>
