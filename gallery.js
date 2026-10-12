@@ -91,7 +91,7 @@ var PROJECTS=[
     P2("alb-4","during","Old fittings removed"),
     P2("alb-5","after","Finished bathroom")
    ]},
-  {name:"Protea gamazine", area:"",
+  {name:"Protea gamazine", area:"Protea Glen",
    blurb:"Textured gamazine wall coating applied by hand to the boundary and entrance walls of a home.",
    cover:P2("pro-5","after","Finished textured frontage"),
    story:{
