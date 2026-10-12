@@ -34,7 +34,7 @@ article h3{margin:4px 0 6px;font-size:18px}article p{color:var(--mut);font-size:
 .vids{display:grid;gap:14px}
 .vids figure{margin:0}.vids video{width:100%;border-radius:12px;background:#000}
 .vids figcaption{color:var(--mut);font-size:14px;margin-top:6px}
-.vids:empty::after{content:"Videos coming soon";color:var(--mut)}
+.vids:empty{display:none}
 .contact .card small{display:block;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;font-size:12px}
 .contact .card b{font-size:18px;word-break:break-word}
 footer{text-align:center;padding:40px 20px 90px;color:var(--mut);font-size:13px;border-top:1px solid #222}
