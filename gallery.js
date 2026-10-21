@@ -1,7 +1,7 @@
 // Add a project: copy an object in PROJECTS. Photos go in photos/ (about 1600px on the long side).
 // stage: before | during | after. story: short text for each stage.
 var FN={"kk-after-5":"82-1-kk-after-5","kk-after-6":"94-2-kk-after-6","kk-after-7":"98-3-kk-after-7","lenasia-before-1": "83-1-lenasia-before-1", "lenasia-during-1": "95-2-lenasia-during-1", "kk-after-1": "3-kk-after-1", "kk-after-2": "4-kk-after-2", "kk-after-3": "5-kk-after-3", "kk-after-4": "99-6-kk-after-4", "kk-before-1": "100-7-kk-before-1", "kk-before-2": "101-8-kk-before-2", "kk-during-1": "102-9-kk-during-1", "kk-during-2": "84-10-kk-during-2", "kk-during-3": "85-11-kk-during-3", "kk-during-4": "86-12-kk-during-4", "kk-during-5": "87-13-kk-during-5", "kk-during-6": "88-14-kk-during-6", "lenasia-after-1": "89-15-lenasia-after-1", "lenasia-after-2": "90-16-lenasia-after-2", "lenasia-after-3": "91-17-lenasia-after-3", "lenasia-after-4": "92-18-lenasia-after-4", "lenasia-after-5": "93-19-lenasia-after-5", "lenasia-during-2": "96-20-lenasia-during-2", "lenasia-during-3": "97-21-lenasia-during-3"};
-var FN2={"pro-1":"104-1-pro-1","pro-10":"115-2-pro-10","pro-2":"117-3-pro-2","pro-3":"119-4-pro-3","pro-4":"121-5-pro-4","pro-5":"123-6-pro-5","pro-6":"125-7-pro-6","pro-7":"127-8-pro-7","pro-8":"129-9-pro-8","pro-9":"106-10-pro-9","alb-1":"103-1-alb-1","alb-2":"114-2-alb-2","alb-3":"116-3-alb-3","alb-4":"118-4-alb-4","alb-5":"120-5-alb-5","nat-1":"122-6-nat-1","nat-2":"124-7-nat-2","nat-3":"126-8-nat-3","nat-4":"128-9-nat-4","nat-5":"105-10-nat-5","nat-6":"107-11-nat-6","ox-1":"108-12-ox-1","ox-2":"109-13-ox-2","ox-3":"110-14-ox-3","ox-4":"111-15-ox-4","ox-5":"112-16-ox-5","ox-6":"113-17-ox-6"};var VF={"alb-v2":"2-alb-v2","alb-v2p":"1-alb-v2-poster","alb-v3":"4-alb-v3","alb-v3p":"3-alb-v3-poster","alb-v4":"6-alb-v4","alb-v4p":"5-alb-v4-poster","alb-v5":"8-alb-v5","alb-v5p":"7-alb-v5-poster","pro-v1":"12-pro-v1","pro-v2":"2-pro-v2","pro-v2p":"1-pro-v2-poster","pro-v1p":"11-pro-v1-poster","alb-v1":"19-alb-v1","alb-v1p":"18-alb-v1-poster","nat-v1":"21-nat-v1","nat-v1p":"20-nat-v1-poster","nat-v2":"23-nat-v2","nat-v2p":"22-nat-v2-poster"};
+var FN2={"pg-1":"1-pg-1","pg-2":"2-pg-2","pg-3":"3-pg-3","pg-4":"4-pg-4","pg-5":"5-pg-5","pg-6":"6-pg-6","pg-7":"7-pg-7","pg-8":"8-pg-8","pg-9":"9-pg-9","pg-10":"10-pg-10","pg-11":"11-pg-11","pg-12":"12-pg-12","pg-13":"13-pg-13","pg-14":"14-pg-14","pg-15":"15-pg-15","pro-1":"104-1-pro-1","pro-10":"115-2-pro-10","pro-2":"117-3-pro-2","pro-3":"119-4-pro-3","pro-4":"121-5-pro-4","pro-5":"123-6-pro-5","pro-6":"125-7-pro-6","pro-7":"127-8-pro-7","pro-8":"129-9-pro-8","pro-9":"106-10-pro-9","alb-1":"103-1-alb-1","alb-2":"114-2-alb-2","alb-3":"116-3-alb-3","alb-4":"118-4-alb-4","alb-5":"120-5-alb-5","nat-1":"122-6-nat-1","nat-2":"124-7-nat-2","nat-3":"126-8-nat-3","nat-4":"128-9-nat-4","nat-5":"105-10-nat-5","nat-6":"107-11-nat-6","ox-1":"108-12-ox-1","ox-2":"109-13-ox-2","ox-3":"110-14-ox-3","ox-4":"111-15-ox-4","ox-5":"112-16-ox-5","ox-6":"113-17-ox-6"};var VF={"alb-v2":"2-alb-v2","alb-v2p":"1-alb-v2-poster","alb-v3":"4-alb-v3","alb-v3p":"3-alb-v3-poster","alb-v4":"6-alb-v4","alb-v4p":"5-alb-v4-poster","alb-v5":"8-alb-v5","alb-v5p":"7-alb-v5-poster","pro-v1":"12-pro-v1","pro-v2":"2-pro-v2","pro-v2p":"1-pro-v2-poster","pro-v1p":"11-pro-v1-poster","alb-v1":"19-alb-v1","alb-v1p":"18-alb-v1-poster","nat-v1":"21-nat-v1","nat-v1p":"20-nat-v1-poster","nat-v2":"23-nat-v2","nat-v2p":"22-nat-v2-poster"};
 function P2(n,s,a){return {stage:s,src:"photos2/"+FN2[n]+".jpg",alt:a}}
 function V(n,c){return {src:"videos/"+VF[n]+".mp4",poster:"videos/"+VF[n+"p"]+".jpg",caption:c}}
 function P(n,s,a){return {stage:s,src:"photos/"+FN[n]+".jpg",alt:a}}
@@ -112,9 +112,28 @@ var PROJECTS=[
     P2("pro-10","after","Finished textured corner")
    ]},
   {name:"Protea Glen Extension 11", area:"Protea Glen Extension 11",
-   blurb:"A completed home, shown in a full walkthrough: night exterior with an LED-lit courtyard and artificial grass, dining area, lounge, bathroom with a freestanding bath, bedroom with LED cove lighting and a shower.",
+   blurb:"From 3D concept to completed home: designed with DSJ Designs, then built - new face-brickwork, a flat concrete roof and a full interior refit with curved ceiling features. Shown from the design renders through the build to the finished walkthrough.",
+   story:{
+    before:"The design came first: 3D concept renders by DSJ Designs set out the street facade, courtyard and interior layout before work started on site.",
+    during:"New face-brick walls went up, followed by the concrete roof slab and parapet. Inside, floors were lifted for new plumbing, fresh plaster went on, and the curved ceiling bulkheads were framed and boarded."},
    videos:[V("pro-v2","Protea Glen Extension 11: completed home walkthrough")],
-   photos:[]},
+   photos:[
+    P2("pg-1","before","Concept render of the courtyard and entrance at night - design by DSJ Designs"),
+    P2("pg-2","before","3D concept layout of the home and courtyard - design by DSJ Designs"),
+    P2("pg-3","before","3D concept layout with carport and dining patio - design by DSJ Designs"),
+    P2("pg-4","during","Interior strip-out: floors lifted and new window openings"),
+    P2("pg-5","during","First face-brick walls going up"),
+    P2("pg-6","during","Walls at window height, seen from the street"),
+    P2("pg-7","during","Laying face brick from the scaffold"),
+    P2("pg-8","during","Front walls at lintel height"),
+    P2("pg-9","during","Roof timbers going up over the courtyard"),
+    P2("pg-10","during","Face-brick parapet above the plaster band"),
+    P2("pg-11","during","Concrete roof slab cast, view from the street"),
+    P2("pg-12","during","Shell plastered, ready for finishes"),
+    P2("pg-13","during","Curved ceiling bulkhead framed inside"),
+    P2("pg-14","during","Bulkhead boarded and ceilings going in"),
+    P2("pg-15","during","Interior taking shape through the new doorways")
+   ]},
 ];
 var VIDEOS=[];
 var ALL=[];
